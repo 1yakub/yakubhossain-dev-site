@@ -3,63 +3,133 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yakub Hossain — Full Stack Developer</title>
-<meta name="description" content="Md. Yakub Hossain, full stack developer in Dhaka, Bangladesh. Web, mobile and IoT, from backend to deployment.">
+<title>Yakub Hossain</title>
+<meta name="description" content="Yakub Hossain builds and ships web products end to end with AI coding agents: client sites on Payload and Next.js, self hosted infrastructure, and open source fixes. Dhaka, working with clients in the US.">
+<meta property="og:title" content="Yakub Hossain">
+<meta property="og:description" content="Full stack developer who builds and ships with AI coding agents every day. Selected work.">
+<meta property="og:image" content="https://yakubhossain.dev/assets/dso-desktop.webp">
+<meta property="og:url" content="https://yakubhossain.dev/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://yakubhossain.dev/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: dark; }
-  * { margin: 0; box-sizing: border-box; }
+  :root {
+    --paper: #fcfcfa;
+    --ink: #1b1d20;
+    --muted: #5f656c;
+    --rule: #e6e5e0;
+    --frame: #d9d8d2;
+    --link: #1b1d20;
+    --accent: #0f5d8f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #15171a; --ink: #ecebe6; --muted: #a2a7ad; --rule: #2a2e33; --frame: #34393f; --link: #ecebe6; --accent: #7cb7e6; }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    background: #0e1116; color: #d7dde5;
-    min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    padding: 2rem; line-height: 1.65;
+    background: var(--paper); color: var(--ink);
+    font-family: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-optical-sizing: auto;
+    font-size: 1.125rem; line-height: 1.6;
+    padding: clamp(2.5rem, 8vw, 6rem) 1.25rem 5rem;
   }
-  main { max-width: 560px; }
-  h1 { color: #fff; font-size: 1.9rem; letter-spacing: -0.02em; }
-  .role { color: #6db3f2; font-weight: 600; margin-top: .25rem; }
-  .loc { color: #8b949e; font-size: .95rem; margin-bottom: 1.4rem; }
-  p.bio { margin-bottom: 1.4rem; }
-  h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; color: #8b949e; margin: 1.4rem 0 .5rem; }
-  ul.stack { list-style: none; display: flex; flex-wrap: wrap; gap: .45rem; padding: 0; }
-  ul.stack li {
-    background: #1a2029; border: 1px solid #2b3442; border-radius: 999px;
-    padding: .18rem .7rem; font-size: .85rem; color: #b8c2cf;
-  }
-  .links { display: flex; flex-wrap: wrap; gap: 1.1rem; margin-top: 1.5rem; }
-  .links a { color: #6db3f2; text-decoration: none; border-bottom: 1px solid #2b3442; padding-bottom: 1px; }
-  .links a:hover { border-color: #6db3f2; }
-  footer { margin-top: 2rem; color: #566070; font-size: .8rem; }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 1.125rem; font-weight: 600; line-height: 1.6; }
+  .lede { color: var(--muted); }
+  .intro { margin-top: 1.75rem; max-width: 36rem; }
+  .intro p + p { margin-top: 1.1em; }
+  a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.16em; text-decoration-color: var(--frame); }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  h2 { font-size: 1.125rem; font-weight: 600; margin: 4.5rem 0 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+  .work { display: grid; gap: 3.5rem; }
+  .project h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.5; }
+  .project h3 a { text-decoration: none; }
+  .project h3 a:hover { text-decoration: underline; }
+  .project .what { color: var(--muted); margin-top: 0.15rem; }
+  .project p.body { margin-top: 0.85rem; max-width: 36rem; }
+  .project .meta { margin-top: 0.6rem; color: var(--muted); font-size: 0.95rem; }
+  .shots { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin: 1.25rem 0 0; }
+  @media (min-width: 560px) { .shots { grid-template-columns: 3fr 1fr; align-items: start; } }
+  .shot { border: 1px solid var(--frame); border-radius: 8px; overflow: hidden; background: #fff; }
+  .shot img { display: block; width: 100%; height: auto; }
+  .list { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+  .list li { max-width: 36rem; }
+  .list .k { font-weight: 600; }
+  .list .k a { text-decoration: none; }
+  .list .k a:hover { text-decoration: underline; }
+  .list .d { color: var(--muted); }
+  .tools { color: var(--muted); }
+  .contact { margin-top: 4.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+  .contact p + p { margin-top: 0.5rem; }
+  footer { margin-top: 3rem; color: var(--muted); font-size: 0.9rem; }
+  @media (prefers-reduced-motion: no-preference) { a { transition: text-decoration-color 120ms ease-out; } }
 </style>
 </head>
 <body>
 <main>
-  <h1>Md. Yakub Hossain</h1>
-  <div class="role">Full Stack Developer</div>
-  <div class="loc">Dhaka, Bangladesh · working with clients worldwide</div>
+  <header>
+    <h1>Yakub Hossain</h1>
+    <p class="lede">Full stack developer, Dhaka. Building and shipping with AI coding agents every day.</p>
+  </header>
 
-  <p class="bio">
-    I build and ship web, mobile and IoT products end to end: from REST APIs and
-    databases to CI/CD and production deployments. Recent work spans client platforms,
-    self hosted infrastructure and sensor to cloud pipelines. Co author of a published
-    research paper on automated image captioning.
-  </p>
-
-  <h2>Stack</h2>
-  <ul class="stack">
-    <li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li>
-    <li>Laravel</li><li>MySQL</li><li>MongoDB</li><li>Flutter</li>
-    <li>Docker</li><li>ESP32 / MQTT</li>
-  </ul>
-
-  <h2>Contact</h2>
-  <div class="links">
-    <a href="mailto:hello@yakubhossain.dev">hello@yakubhossain.dev</a>
-    <a href="https://github.com/1yakub">GitHub</a>
-    <a href="https://www.linkedin.com/in/yakubhossain">LinkedIn</a>
+  <div class="intro">
+    <p>I take a product from a brief to a live site on my own: design, content structure, code, hosting, and the client calls in between. Most of my working day runs through Claude Code. It drafts, refactors, deploys, transcribes calls, and keeps my notes, while I make the decisions and check the result on a real phone before anything ships.</p>
+    <p>Stack right now: Next.js, Payload CMS, Postgres, Tailwind, Docker on Hetzner and Azure, GitHub Actions. Two years in industry before that on MERN, Laravel, React Native, and Flutter, plus a robotics and IoT background.</p>
   </div>
 
-  <footer>© 2026 Yakub Hossain</footer>
+  <h2>Work</h2>
+  <div class="work">
+
+    <article class="project">
+      <h3><a href="https://dsomindsetcoach.com/">DSO Mindset Coach</a></h3>
+      <p class="what">Coaching website for a US mindset coach, August 2026</p>
+      <div class="shots">
+        <a class="shot" href="https://dsomindsetcoach.com/"><img src="assets/dso-desktop.webp" width="1600" height="1000" alt="DSO Mindset Coach home page: a navy hero with the headline From Inner Struggle to Inner Peace over a lakeside sunrise" loading="eager"></a>
+        <a class="shot" href="https://dsomindsetcoach.com/"><img src="assets/dso-phone.webp" width="600" height="1169" alt="The same home page on a phone" loading="lazy"></a>
+      </div>
+      <p class="body">Designed and built in two weeks from the client's one page brief and a WhatsApp thread of content. A small design system (navy, ivory, one serif, one sans, a hand lettered accent), an art directed hero, a self help hub with lesson pages and embedded reels, a lead capture popup, and an editable CMS so the coach owns his content. Verified at 390 and 1440 pixels before every deploy.</p>
+      <p class="meta">Payload CMS 3, Next.js 16, Postgres, Tailwind, Docker image built in CI and pulled on a Hetzner box. Live now with a preview notice until the coach's November launch.</p>
+    </article>
+
+    <article class="project">
+      <h3><a href="https://claimmytime.com/">Reclaim Your Time</a></h3>
+      <p class="what">AI consulting funnel for a US consultant, June to August 2026</p>
+      <div class="shots">
+        <a class="shot" href="https://claimmytime.com/"><img src="assets/claim-desktop.webp" width="1600" height="1000" alt="Reclaim Your Time home page: Customize Your AI Toolbox, Take back your time, with a booking button" loading="lazy"></a>
+        <a class="shot" href="https://claimmytime.com/"><img src="assets/claim-phone.webp" width="600" height="1169" alt="The same page on a phone" loading="lazy"></a>
+      </div>
+      <p class="body">A landing page and assessment funnel that sells a paid AI tools assessment to business owners. Built from scratch in a new repo with the client's editing needs in mind: the copy, tool list, and offers live in the CMS. Stripe checkout, booking flow, and a voice intake agent built on Retell. The pipeline from this project became the template for the next one.</p>
+      <p class="meta">Next.js, Payload CMS, Postgres, Docker Compose on Hetzner, GitHub Actions, Postmark, Cloudflare.</p>
+    </article>
+
+    <article class="project">
+      <h3>An agent that runs my day</h3>
+      <p class="what">Personal operating setup, built and used since July 2026</p>
+      <p class="body">A markdown knowledge base on the LLM wiki pattern (Karpathy's) that a Claude Code session reads first and writes back to after every task: client pages, meeting notes, decisions, a per client message ledger. On top of it, the same session drafts client replies in my voice for my approval, captures live captions from calls, transcribes voice notes, deploys sites, files open source PRs, and books calendar events. No custom framework, just files, git, and a browser.</p>
+      <p class="meta">Claude Code, Chrome automation, Deepgram, Google Workspace CLI, self hosted Solidtime and Coolify on Azure.</p>
+    </article>
+
+  </div>
+
+  <h2>Open source</h2>
+  <ul class="list">
+    <li><span class="k"><a href="https://github.com/1yakub/payload-live-nav">payload-live-nav</a></span> <span class="d">A Payload CMS plugin that keeps site navigation in sync with published documents. On npm.</span></li>
+    <li><span class="k"><a href="https://github.com/payloadcms/payload/pull/17663">payloadcms/payload #17663</a></span> <span class="d">Accessible names for the admin pagination arrows, approved by a core maintainer, waiting on merge. A second fix in <a href="https://github.com/payloadcms/payload/pull/17664">#17664</a> is in review.</span></li>
+    <li><span class="k"><a href="https://github.com/coollabsio/coolify/pull/11167">coollabsio/coolify #11167</a></span> <span class="d">A Solidtime one click service template, with a companion docs PR.</span></li>
+    <li><span class="k"><a href="https://github.com/npm/read/pull/157">npm/read #157</a></span> <span class="d">Fix for a prompt that never settles when stdin closes, one cause of an npm login crash, with a regression test.</span></li>
+    <li><span class="k"><a href="https://github.com/solidtime-io/solidtime/pull/1201">solidtime-io/solidtime #1201</a></span> <span class="d">Root cause and fix for blank date group labels in shared reports; the maintainer's own fix landed first and the credit stayed in the thread.</span></li>
+  </ul>
+
+  <div class="contact">
+    <p><a href="mailto:hello@yakubhossain.dev">hello@yakubhossain.dev</a></p>
+    <p><a href="https://github.com/1yakub">GitHub</a> and <a href="https://www.linkedin.com/in/yakubhossain">LinkedIn</a></p>
+  </div>
+
+  <footer>Yakub Hossain, 2026. Set in Source Serif 4.</footer>
 </main>
 </body>
 </html>
-
